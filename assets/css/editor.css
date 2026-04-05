@@ -1,0 +1,40 @@
+/**
+ * Rezon8 Child — Block Editor Styles
+ * Mirrors front-end brand tokens inside the Gutenberg editor.
+ */
+
+:root {
+  --r8-primary:          #0D47A1;
+  --r8-primary-light:    #5472D3;
+  --r8-secondary:        #00BCD4;
+  --r8-surface:          #FAFAFA;
+  --r8-on-surface:       #1A1A1A;
+  --r8-on-surface-muted: #5F6368;
+  --r8-font-sans:        'Roboto', 'Inter', system-ui, sans-serif;
+  --r8-elevation-1:      0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.editor-styles-wrapper {
+  font-family: var(--r8-font-sans) !important;
+  color: var(--r8-on-surface);
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4 {
+  font-family: var(--r8-font-sans);
+  letter-spacing: -0.01em;
+}
+
+.editor-styles-wrapper a {
+  color: var(--r8-primary);
+}
+
+/* Card preview in editor */
+.editor-styles-wrapper .wp-block-group.is-style-card {
+  background: var(--r8-surface);
+  border-radius: 8px;
+  box-shadow: var(--r8-elevation-1);
+  padding: 1.5rem;
+}

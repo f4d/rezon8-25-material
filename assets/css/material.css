@@ -1,0 +1,217 @@
+/**
+ * Rezon8 Child — Material Design 3 Component Overrides
+ * Targets Twenty Twenty-Five blocks and native WP elements.
+ */
+
+/* ── Base Reset / Body ──────────────────────────────────────────────────────── */
+
+body {
+  font-family: var(--r8-font-sans);
+  background-color: var(--r8-background);
+  color: var(--r8-on-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Material Surface ────────────────────────────────────────────────────────── */
+
+.wp-site-blocks {
+  background: var(--r8-background);
+}
+
+/* ── Headings ────────────────────────────────────────────────────────────────── */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--r8-font-display);
+  color: var(--r8-on-surface);
+  letter-spacing: -0.01em;
+}
+
+/* ── Links ───────────────────────────────────────────────────────────────────── */
+
+a {
+  color: var(--r8-primary);
+  text-decoration: none;
+  transition: color var(--r8-transition-fast);
+}
+a:hover {
+  color: var(--r8-primary-light);
+  text-decoration: underline;
+}
+
+/* ── Material Card (wp-block-group with shadow) ───────────────────────────────── */
+
+.wp-block-group.is-style-card,
+.r8-card {
+  background: var(--r8-surface);
+  border-radius: var(--r8-radius-md);
+  box-shadow: var(--r8-elevation-1);
+  padding: 1.5rem;
+  transition: box-shadow var(--r8-transition-std);
+}
+.wp-block-group.is-style-card:hover,
+.r8-card:hover {
+  box-shadow: var(--r8-elevation-3);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────────────────────── */
+
+.wp-block-button__link,
+.wp-element-button {
+  font-family: var(--r8-font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.0892857em;
+  text-transform: uppercase;
+  border-radius: var(--r8-radius-sm);
+  padding: 0.625rem 1.5rem;
+  transition:
+    background-color var(--r8-transition-fast),
+    box-shadow var(--r8-transition-fast),
+    transform var(--r8-transition-fast);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--r8-elevation-1);
+}
+
+.wp-block-button__link:hover,
+.wp-element-button:hover {
+  box-shadow: var(--r8-elevation-2);
+  transform: translateY(-1px);
+}
+
+/* Filled (default) */
+.wp-block-button:not(.is-style-outline) .wp-block-button__link {
+  background-color: var(--r8-primary);
+  color: var(--r8-on-primary);
+}
+.wp-block-button:not(.is-style-outline) .wp-block-button__link:hover {
+  background-color: var(--r8-primary-light);
+}
+
+/* Outlined */
+.wp-block-button.is-style-outline .wp-block-button__link {
+  background-color: transparent;
+  color: var(--r8-primary);
+  border: 2px solid var(--r8-primary);
+  box-shadow: none;
+}
+.wp-block-button.is-style-outline .wp-block-button__link:hover {
+  background-color: rgba(13, 71, 161, 0.06);
+  box-shadow: none;
+}
+
+/* Ripple effect */
+.wp-block-button__link::after,
+.wp-element-button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.12);
+  opacity: 0;
+  transition: opacity var(--r8-transition-fast);
+  border-radius: inherit;
+}
+.wp-block-button__link:active::after,
+.wp-element-button:active::after {
+  opacity: 1;
+}
+
+/* ── Navigation ──────────────────────────────────────────────────────────────── */
+
+.wp-block-navigation {
+  font-family: var(--r8-font-sans);
+  font-size: var(--r8-type-label-lg);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.wp-block-navigation a {
+  color: var(--r8-on-surface);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--r8-radius-sm);
+  transition: background-color var(--r8-transition-fast), color var(--r8-transition-fast);
+  text-decoration: none;
+}
+.wp-block-navigation a:hover {
+  background-color: rgba(13, 71, 161, 0.08);
+  color: var(--r8-primary);
+}
+
+/* ── Site Header ─────────────────────────────────────────────────────────────── */
+
+.wp-block-template-part[data-slug="header"],
+header.site-header {
+  background-color: var(--r8-background);
+  box-shadow: var(--r8-elevation-1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* ── Hero / Cover Block ──────────────────────────────────────────────────────── */
+
+.wp-block-cover {
+  min-height: 60vh;
+}
+.wp-block-cover .wp-block-cover__inner-container {
+  padding: 3rem 1.5rem;
+}
+
+/* ── Images ──────────────────────────────────────────────────────────────────── */
+
+.wp-block-image img,
+figure img {
+  border-radius: var(--r8-radius-sm);
+  max-width: 100%;
+  height: auto;
+}
+
+/* ── Forms ───────────────────────────────────────────────────────────────────── */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+input[type="password"],
+textarea,
+select {
+  font-family: var(--r8-font-sans);
+  font-size: var(--r8-type-body-lg);
+  border: 1.5px solid #DADCE0;
+  border-radius: var(--r8-radius-sm);
+  padding: 0.75rem 1rem;
+  background: var(--r8-surface);
+  color: var(--r8-on-surface);
+  transition: border-color var(--r8-transition-fast), box-shadow var(--r8-transition-fast);
+  width: 100%;
+  outline: none;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--r8-primary);
+  box-shadow: 0 0 0 2px rgba(13, 71, 161, 0.18);
+}
+
+/* ── Utility Classes ─────────────────────────────────────────────────────────── */
+
+.r8-text-primary    { color: var(--r8-primary); }
+.r8-text-secondary  { color: var(--r8-secondary); }
+.r8-text-muted      { color: var(--r8-on-surface-muted); }
+.r8-bg-primary      { background-color: var(--r8-primary); color: var(--r8-on-primary); }
+.r8-bg-surface      { background-color: var(--r8-surface); }
+.r8-shadow-1        { box-shadow: var(--r8-elevation-1); }
+.r8-shadow-2        { box-shadow: var(--r8-elevation-2); }
+.r8-shadow-3        { box-shadow: var(--r8-elevation-3); }
+.r8-radius-md       { border-radius: var(--r8-radius-md); }
+.r8-radius-lg       { border-radius: var(--r8-radius-lg); }
+
+/* ── Responsive Tweaks ───────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  h1 { font-size: var(--r8-type-display-sm); }
+  h2 { font-size: var(--r8-type-headline-lg); }
+  .wp-block-cover { min-height: 40vh; }
+}
