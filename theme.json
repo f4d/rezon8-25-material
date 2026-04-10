@@ -6,16 +6,14 @@
     "useRootPaddingAwareAlignments": true,
     "color": {
       "palette": [
-        { "slug": "r8-primary",          "color": "#0D47A1", "name": "Rezon8 Primary" },
-        { "slug": "r8-primary-light",    "color": "#5472D3", "name": "Rezon8 Primary Light" },
-        { "slug": "r8-primary-dark",     "color": "#002171", "name": "Rezon8 Primary Dark" },
-        { "slug": "r8-secondary",        "color": "#00BCD4", "name": "Rezon8 Accent" },
-        { "slug": "r8-secondary-light",  "color": "#62EFFF", "name": "Rezon8 Accent Light" },
-        { "slug": "r8-secondary-dark",   "color": "#008BA3", "name": "Rezon8 Accent Dark" },
-        { "slug": "r8-surface",          "color": "#FAFAFA", "name": "Surface" },
+        { "slug": "r8-primary",          "color": "#28BAE0", "name": "Open Sky" },
+        { "slug": "r8-primary-dark",     "color": "#0A6E8F", "name": "Deep Current" },
+        { "slug": "r8-secondary",        "color": "#3DB87A", "name": "Living Green" },
+        { "slug": "r8-tertiary",         "color": "#607080", "name": "Watershed" },
+        { "slug": "r8-surface",          "color": "#F2F7F8", "name": "Morning Mist" },
         { "slug": "r8-surface-variant",  "color": "#F0F4F8", "name": "Surface Variant" },
         { "slug": "r8-background",       "color": "#FFFFFF", "name": "Background" },
-        { "slug": "r8-on-surface",       "color": "#1A1A1A", "name": "On Surface" },
+        { "slug": "r8-on-surface",       "color": "#1C2D30", "name": "Midnight Grove" },
         { "slug": "r8-on-surface-muted", "color": "#5F6368", "name": "On Surface Muted" },
         { "slug": "r8-error",            "color": "#B00020", "name": "Error" },
         { "slug": "r8-success",          "color": "#00695C", "name": "Success" }
@@ -23,12 +21,12 @@
       "gradients": [
         {
           "slug": "r8-primary-gradient",
-          "gradient": "linear-gradient(135deg, #002171 0%, #0D47A1 50%, #5472D3 100%)",
+          "gradient": "linear-gradient(135deg, #0A6E8F 0%, #28BAE0 100%)",
           "name": "Rezon8 Primary Gradient"
         },
         {
           "slug": "r8-accent-gradient",
-          "gradient": "linear-gradient(135deg, #008BA3 0%, #00BCD4 100%)",
+          "gradient": "linear-gradient(135deg, #3DB87A 0%, #28BAE0 100%)",
           "name": "Rezon8 Accent Gradient"
         }
       ],
@@ -43,9 +41,19 @@
     "typography": {
       "fontFamilies": [
         {
-          "fontFamily": "'Roboto', 'Inter', system-ui, sans-serif",
-          "slug": "roboto",
-          "name": "Roboto (Material)"
+          "fontFamily": "'Raleway', system-ui, sans-serif",
+          "slug": "raleway",
+          "name": "Raleway (Display)"
+        },
+        {
+          "fontFamily": "'DM Sans', system-ui, sans-serif",
+          "slug": "dm-sans",
+          "name": "DM Sans (Body)"
+        },
+        {
+          "fontFamily": "'Playfair Display', Georgia, serif",
+          "slug": "playfair-display",
+          "name": "Playfair Display (Accent)"
         },
         {
           "fontFamily": "'Roboto Mono', 'Courier New', monospace",
@@ -117,7 +125,7 @@
       "text": "var(--wp--preset--color--r8-on-surface)"
     },
     "typography": {
-      "fontFamily": "var(--wp--preset--font-family--roboto)",
+      "fontFamily": "var(--wp--preset--font-family--dm-sans)",
       "fontSize": "var(--wp--preset--font-size--body-lg)",
       "lineHeight": "1.6"
     },
@@ -168,7 +176,7 @@
           "text": "#FFFFFF"
         },
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--roboto)",
+          "fontFamily": "var(--wp--preset--font-family--raleway)",
           "fontSize": "var(--wp--preset--font-size--label-lg)",
           "fontWeight": "500",
           "letterSpacing": "0.0892857em",

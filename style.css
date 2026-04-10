@@ -20,22 +20,25 @@ Tags:         custom-colors, custom-logo, custom-menu, full-site-editing, block-
 
 :root {
   /* --- Brand Primary --- */
-  --r8-primary:           #0D47A1; /* Deep Blue */
+  --r8-primary:           #28BAE0; /* Open Sky */
   --r8-primary-light:     #5472D3;
-  --r8-primary-dark:      #002171;
+  --r8-primary-dark:      #0A6E8F; /* Deep Current */
   --r8-on-primary:        #FFFFFF;
 
   /* --- Brand Secondary / Accent --- */
-  --r8-secondary:         #00BCD4; /* Cyan */
+  --r8-secondary:         #3DB87A; /* Living Green */
   --r8-secondary-light:   #62EFFF;
   --r8-secondary-dark:    #008BA3;
   --r8-on-secondary:      #000000;
 
+  /* --- Brand Tertiary --- */
+  --r8-tertiary:          #607080; /* Watershed */
+
   /* --- Surface / Background --- */
-  --r8-surface:           #FAFAFA;
+  --r8-surface:           #F2F7F8; /* Morning Mist */
   --r8-surface-variant:   #F0F4F8;
   --r8-background:        #FFFFFF;
-  --r8-on-surface:        #1A1A1A;
+  --r8-on-surface:        #1C2D30; /* Midnight Grove */
   --r8-on-surface-muted:  #5F6368;
 
   /* --- Error / Success --- */
@@ -56,9 +59,11 @@ Tags:         custom-colors, custom-logo, custom-menu, full-site-editing, block-
   --r8-radius-full: 999px;
 
   /* --- Typography Scale (Material Type) --- */
-  --r8-font-sans:   'Roboto', 'Inter', system-ui, sans-serif;
-  --r8-font-display:'Roboto', 'Google Sans', system-ui, sans-serif;
-  --r8-font-mono:   'Roboto Mono', 'Courier New', monospace;
+  --r8-font-sans:    'DM Sans', system-ui, sans-serif;
+  --r8-font-body:    'DM Sans', system-ui, sans-serif;
+  --r8-font-display: 'Raleway', system-ui, sans-serif;
+  --r8-font-accent:  'Playfair Display', Georgia, serif;
+  --r8-font-mono:    'Roboto Mono', 'Courier New', monospace;
 
   --r8-type-display-lg:  3.5625rem;   /* 57px */
   --r8-type-display-md:  2.8125rem;   /* 45px */

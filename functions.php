@@ -34,10 +34,10 @@ function rezon8_child_enqueue() {
 		wp_get_theme( 'twentytwentyfive' )->get( 'Version' )
 	);
 
-	/* 2. Google Fonts — Roboto (300, 400, 500, 700) + Roboto Mono */
+	/* 2. Google Fonts — Raleway, DM Sans, Playfair Display */
 	wp_enqueue_style(
 		'rezon8-google-fonts',
-		'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap',
+		'https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;800&family=DM+Sans:wght@400;500&family=Playfair+Display:wght@400;700&display=swap',
 		array(),
 		null
 	);
