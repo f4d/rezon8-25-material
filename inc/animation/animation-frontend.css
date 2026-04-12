@@ -1,0 +1,32 @@
+/**
+ * Rezon8 2025 Material — animation-frontend.css
+ * Base styles for the scroll-reveal animation system.
+ * Dynamic transition values are injected by animation-frontend.js
+ */
+
+/* Prevent layout shift before JS initialises */
+[data-r8-anim]:not([data-r8-anim-ready]) {
+	opacity: 1 !important;
+	transform: none !important;
+}
+
+/* Once JS has applied initial state, ensure smooth transition */
+[data-r8-anim][data-r8-anim-ready] {
+	backface-visibility: hidden;
+}
+
+/* Revealed state override */
+[data-r8-anim][data-r8-anim-done] {
+	will-change: auto;
+}
+
+/* Respect system reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+	[data-r8-anim],
+	[data-r8-anim][data-r8-anim-ready],
+	[data-r8-anim][data-r8-anim-done] {
+		opacity: 1 !important;
+		transform: none !important;
+		transition: none !important;
+	}
+}

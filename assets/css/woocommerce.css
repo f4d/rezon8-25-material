@@ -1,0 +1,101 @@
+/**
+ * Rezon8 2025 Material — assets/css/woocommerce.css
+ * Material Design overrides for WooCommerce shop pages.
+ */
+
+/* Product cards in loop */
+.r8-product-card {
+  background: #fff;
+  border-radius: var(--r8-radius-md, 8px);
+  box-shadow: var(--r8-shadow-1, 0 1px 3px rgba(0,0,0,.12));
+  overflow: hidden;
+  transition: box-shadow 200ms cubic-bezier(0.4,0,0.2,1), transform 200ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.r8-product-card:hover {
+  box-shadow: var(--r8-shadow-3, 0 10px 20px rgba(0,0,0,.15));
+  transform: translateY(-2px);
+}
+
+/* Product title */
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--r8-dark, #0d0d0d);
+}
+
+/* Price */
+.woocommerce .price,
+.woocommerce ul.products li.product .price {
+  color: var(--r8-primary, #11c6de);
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+
+/* Add to Cart button */
+.woocommerce ul.products li.product .button,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+  background: var(--r8-primary, #11c6de) !important;
+  color: #fff !important;
+  border-radius: 9999px !important;
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  font-size: 0.85rem !important;
+  border: none !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,.12) !important;
+  transition: background 200ms ease, box-shadow 200ms ease !important;
+}
+
+.woocommerce ul.products li.product .button:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover {
+  background: var(--r8-primary-dark, #0da8be) !important;
+  box-shadow: 0 3px 6px rgba(0,0,0,.15) !important;
+}
+
+/* Sale badge */
+.woocommerce span.onsale {
+  background: var(--r8-primary, #11c6de);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+}
+
+/* Cart table */
+.woocommerce table.shop_table {
+  border-radius: var(--r8-radius-md, 8px);
+  overflow: hidden;
+  box-shadow: var(--r8-shadow-1, 0 1px 3px rgba(0,0,0,.12));
+}
+
+.woocommerce table.shop_table th {
+  background: var(--r8-dark, #0d0d0d);
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Order total */
+.woocommerce .order-total .amount {
+  color: var(--r8-primary, #11c6de);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Breadcrumb */
+.r8-breadcrumb {
+  font-size: 0.8rem;
+  color: var(--r8-on-surface-medium, #6d7174);
+  margin-bottom: 1rem;
+}
+
+.r8-breadcrumb a { color: var(--r8-primary, #11c6de); }
